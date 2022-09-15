@@ -2,8 +2,8 @@
 <html lang="es">
     <head>
         <title>MUROS DE CONTENCIÓN</title>
-        <link rel="stylesheet" type="text/css" href="stylemuros.css"/>
-        <link rel="icon" href="IMAGENES/GIFMorty.gif" />
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <link rel="icon" href="/IMAGENES/areas.jpg" />
     </head>
     <body>
         <h1>MUROS DE CONTENCIÓN</h1>
@@ -21,91 +21,220 @@
                     <tbody>
                         <tr>
                             <td class="CP">ү (KN/m³)</td>
-                            <td><input class="helptext" type="number" placeholder="Peso específico" name="Peso específico"></td>
-                            <td><input class="helptext" type="number" placeholder="Peso específico" name="Peso específico"></td>
+                            <td><input class="helptext" type="number" placeholder="Peso específico" id="pesoespecificouno" name="Peso específico 1"></td>
+                            <td><input class="helptext" type="number" placeholder="Peso específico" id="pesoespecificodos" name="Peso específico 2"></td>
                         </tr>
                         <tr>
                             <td class="CP">Φ (°)</td>
-                            <td><input class="helptext" type="number" placeholder="Ángulo de fricción" name="Ángulo de fricción"></td>
-                            <td><input class="helptext" type="number" placeholder="Ángulo de fricción" name="Ángulo de fricción"></td>
+                            <td><input class="helptext" type="number" placeholder="Ángulo de fricción" id="angulodefriccionuno" name="Ángulo de fricción"></td>
+                            <td><input class="helptext" type="number" placeholder="Ángulo de fricción" id="angulodefricciondos" name="Ángulo de fricción"></td>
                         </tr>
                         <tr>
                             <td class="CP">C (KN/m²)</td>
-                            <td><input class="helptext" type="number" placeholder="Cohesión" name="Cohesión"></td>
-                            <td><input class="helptext" type="number" placeholder="Cohesión" name="Cohesión"></td>
+                            <td><input class="helptext" type="number" placeholder="Cohesión" id="cohesionuno" name="Cohesión"></td>
+                            <td><input class="helptext" type="number" placeholder="Cohesión" id="cohesiondos" name="Cohesión"></td>
                         </tr>
                 </table>
             </div>
         </section>
         <h3>DIMENCIONES DEL MURO</h3>
         <section class="dimenciones">
-            <div class="tabla">
-                <table>
-                    <thead>
-                        <tr>
-                            <th> DIMENCIONES </th>
-                            <th> MURO DE GRAVEDAD</th>
-                        
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="CP">H(m)</td>
-                            <td><input class="helptext" type="number" placeholder="Altura de muro" name="Altura de muro"></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">H3 (m)</td>
-                            <td><input class="helptext" type="number" placeholder="( 0.12H - 0.17H )" name="Altura de muro"></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">B (m)</td>
-                            <td><input class="helptext" type="number" placeholder="( 0.5H - 0.7H )" name="ancho de muro"></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">B1 (m)</td>
-                            <td><input class="helptext" type="number" placeholder="( > 0.3 m )" name="cabeza de muro"></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">B2 (m)</td>
-                            <td><input class="helptext" type="number" placeholder="( 0.1H - 0.17H )" name="ancho de muro"></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">B3 (m)</td>
-                            <td><input class="helptext" type="number" placeholder="( > 0.02H2 )" name="ancho de muro"></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">H' (m)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">H1 (m)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">H2 (m)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">B4 (m)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">B5 (m)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="CP">B6 (m)</td>
-                            <td></td>
-                        </tr>
+                <div class="tabla">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> DIMENCIONES </th>
+                                <th> MURO DE GRAVEDAD</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="CP">H(m)</td>
+                                <td><input class="helptext" type="float" placeholder="Altura de muro" required="" id="H" name="H"></td>
+                                <td id="rH"class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">H3 (m)</td>
+                                <td><input class="helptext" type="float" placeholder="( 0.12H - 0.17H )" required="" id="Htres" name="H3"></td>
+                                <td id="rHtres" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">B (m)</td>
+                                <td><input class="helptext" type="float" placeholder="( 0.5H - 0.7H )" required="" id="B" name="B"></td>
+                                <td id="rB" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">B1 (m)</td>
+                                <td><input class="helptext" type="float" placeholder="( > 0.3 m )" required="" id="Buno" name="B1"></td>
+                                <td id="rBuno" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">B2 (m)</td>
+                                <td><input class="helptext" type="float" placeholder="( 0.1H - 0.17H )" required="" id="Bdos" name="B2"></td>
+                                <td id="rBdos" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">B3 (m)</td>
+                                <td><input class="helptext" type="float" placeholder="( > 0.02H2 )" required="" id="Btres" name="B3"></td>
+                                <td id="rBtres" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">a (Grados)</td>
+                                <td><input class="helptext" type="float" placeholder="Ángulo alfa" required="" id="a" name="a"></td>
+                                <td id="ra" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">D (m)</td>
+                                <td><input class="helptext" type="float" placeholder="(> 0.6 m )" required="" id="D" name="D"></td>
+                                <td id="rD"" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">H' (m)</td>
+                                <td id="Hp" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">H1 (m)</td>
+                                <td id="Huno" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">H2 (m)</td>
+                                <td id="Hdos" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">B4 (m)</td>
+                                <td id="Bcuatro" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">B5 (m)</td>
+                                <td id="Bcinco" class="result"></td>
+                            </tr>
+                            <tr>
+                                <td class="CP">B6 (m)</td>
+                                <td id="Bseis" class="result"></td>
+                            </tr>
 
-                </table>
+                    </table>
+                </div>
+
+            <div>
+                <button onclick="calculo();"> Calcular </button>
             </div>
             <div>
-                <button> Calcular </button>
-            </div>
-            <div>
-                <img class="imagen" src="IMAGENESMUROS/Dimenciones_de_muro.jpg" width="300">
+                <img class="imagen" src="IMAGENES/Dimenciones_de_muro.jpg" width="300">
             </div>
         </section>
+        <section class="estabilidad">
+            <h1>ANÁLISIS DE ESTABILIDAD</h1>
+            <section class="estatico">
+                <h3>ANÁLISIS DE ESTABILIDAD EN ESTADO ESTÁTICO</h3>
+                <h5>(TEORÍA DE COULOMB)</h5>
+                <div class="volcamiento">
+                    <h3>REVISIÓN DEL VOLCAMIENTO</h3>
+                    <br>
+                    <h4>Coeficiente de presión activa de Coulomb (Ka):</h4>
+                    <figure>
+                        <img src="IMAGENES/ka.png" alt="Ka"/>
+                        <p>=<div class="result" id="valorka"></div></p>
+                    </figure>
+                    <h4>Fuerza activa de Coulomb(Pa) (KN/m):</h4>
+                    <figure>
+                        <img src="IMAGENES/pa.png" alt="Pa"/>
+                        <p>=<div class="result" id="valorpa"></div></p>
+                    </figure>
+                    <h4>Componente Vertical de la Fuerza activa de Coulomb(Pv) (KN/m):</h4>
+                    <figure>
+                        <img src="IMAGENES/pv.png" alt="Pv"/>
+                        <p>=<div class="result" id="valorpv"></div></p>
+                    </figure>
+                    <h4>Componente Horizontal de la Fuerza activa de Coulomb(Ph) (KN/m):</h4>
+                    <figure>
+                        <img src="IMAGENES/ph.png" alt="Ph"/>
+                        <p>=<div class="result" id="valorph"></div></p>
+                    </figure>
+                    <h4>Sumatoria de Momentos resistentes ΣMR respecto al punto C:</h4>
+                    <figure id="areas">
+                        <img src="IMAGENES/areas.jpg" alt="Distribucíón de áreas en el muro" width="200px"/>
+                        <figcaption>Esquema de distribución de áreas en el muro</figcaption>
+                    </figure>
+
+                    <div class="tablamomentos">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th> Sección </th>
+                                    <th> Área (m2)</th>
+                                    <th> Peso Unitario (KN/m)</th>
+                                    <th> Brazo de Momento del punto C (m)</th>
+                                    <th> Momento (KN.m/m))</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="CP">1</td>
+                                    <td class="cambio" id="areauno">A1</td>
+                                    <td class="cambio" id="pesouno">A1xYc</td>
+                                    <td class="cambio" id="brazouno">x1</td>
+                                    <td class="cambio" id="momentouno">M1</td>
+                                </tr>
+                                <tr>
+                                    <td class="CP">2</td>
+                                    <td class="cambio" id="areados">A2</td>
+                                    <td class="cambio" id="pesodos">A2xYc</td>
+                                    <td class="cambio" id="brazodos">x2</td>
+                                    <td class="cambio" id="momentodos">M2</td>
+                                </tr>
+                                <tr>
+                                    <td class="CP">3</td>
+                                    <td class="cambio" id="areatres">A3</td>
+                                    <td class="cambio" id="pesotres">A3xYc</td>
+                                    <td class="cambio" id="brazotres">x3</td>
+                                    <td class="cambio" id="momentotres">M3</td>
+                                </tr>
+                                <tr>
+                                    <td class="CP">4</td>
+                                    <td class="cambio" id="areacuatro">A4</td>
+                                    <td class="cambio" id="pesocuatro">A4xYc</td>
+                                    <td class="cambio" id="brazocuatro">x4</td>
+                                    <td class="cambio" id="momentocuatro">M4</td>
+                                </tr>
+                                <tr>
+                                    <td class="CP">Pv</td>
+                                    <td></td>
+                                    <td class="cambio" id="pesov">(Pv)</td>
+                                    <td class="cambio" id="brazov" >xv</td>
+                                    <td class="cambio" id="momentov">Mv</td>
+                                </tr>
+                                <tr>
+                                    <td class="CP"> </td>
+                                    <td><strong>Σv</strong></td>
+                                    <td class="cambio" id="sumatoriav"></td>
+                                    <td><strong>ΣMR</strong></td>
+                                    <td class="cambio" id="sumatoriam"></td>
+                                </tr>
+                                <tr>
+                                    <td id="pehormigon" class="CP">Peso especifíco del Hormigón (Yc) = 23.58 KN/m³</td>
+                                </tr>
+                        </table>
+                    </div>
+                    <h4>Sumatoria de Momentos que tienden a volcar la estructura en el punto C (ΣMo) (KN.m/m):</h4>
+                    <figure>
+                        <img src="IMAGENES/momentoso.png" alt="ΣMo"/>
+                        <p>=<div class="result" id="sumatoriamo"></div></p>
+                    </figure>
+                    <h4>Factor de seguridad contra volteo respecto a la punta:</h4>
+                    <figure>
+                        <img src="IMAGENES/factorseguridadvolteo.png" alt="F.S(volteo)"/>
+                        <p>=<div class="result" id="factorseguridadvolteo"></div></p><p>>=3<div class="result" id="fsvok"></div></p>
+                    </figure>
+                </div>
+                <div class="deslizamiento">
+                    <h3>REVISIÓN DEL DESLIZAMIENTO</h3>
+                    <br>
+                    <h4>Actualización pendiente</h4>
+
+            </section>
+        </section>
+        <script src="muros.js"></script>   
     </body>
 </html>
