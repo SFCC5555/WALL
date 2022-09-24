@@ -60,6 +60,8 @@ let fsvok=document.getElementById("fsvok");
 
 let z=document.querySelectorAll(".cambio");
 
+let menu=document.querySelector("#menuContainer");
+
 function calculo() {
 
     xhdos=h.value-htres.value;
@@ -197,4 +199,8 @@ function ok() {
         fsvok.innerHTML="Cambiar dimenciones"
         fsvok.setAttribute("class","error");
     }
+}
+
+function mostrarMenu() {
+    menu.classList.toggle("menu")
 }

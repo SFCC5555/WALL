@@ -7,8 +7,16 @@
         <link rel="icon" href="/IMAGENES/areas.jpg" />
     </head>
     <body>
+        <section id="menuContainer" class="inactive">
+            <div><a onclick="mostrarMenu();" href="">PARÁMETROS DE SUELO</a></div>
+            <div><a onclick="mostrarMenu();" href="#dim">DIMENSIONES DEL MURO</a></div>
+            <div><a onclick="mostrarMenu();" href="#ae">ANÁLISIS DE ESTABILIDAD</a></div>
+            <div><a onclick="mostrarMenu();" href="#e">- ANÁLISIS DE ESTABILIDAD EN ESTADO ESTÁTICO</a></div>
+            <div><a onclick="mostrarMenu();" href="#rv">- - REVISIÓN DEL VOLCAMIENTO</a></div>
+            <div><a onclick="mostrarMenu();" href="#rd">- - REVISIÓN DEL DESLIZAMIENTO</a></div>
+        </section>
         <nav>
-            <div>Menú</div>
+            <div onclick="mostrarMenu();">Menú</div>
             <div><a href="">Reload</a></div>
         </nav>
         <h1 class="fixed" style="margin-top: 5px;"><a href="#par">MUROS DE CONTENCIÓN</a></h1>
@@ -43,13 +51,13 @@
                 </table>
             </div>
         </section>
-        <section  class="dimenciones">
-            <h3>DIMENCIONES DEL MURO</h3>
+        <section id="dim" class="dimensiones">
+            <h3>DIMENSIONES DEL MURO</h3>
             <div class="tabla">
                 <table>
                     <thead>
                         <tr>
-                            <th> DIMENCIONES </th>
+                            <th> DIMENSIONES </th>
                             <th> INPUTS</th>
                             <th> OUTPUTS</th>
                         
@@ -107,10 +115,10 @@
             </div>
         </section>
         <img class="imagen" src="IMAGENES/Dimenciones_de_muro.jpg" width="375">
-        <section class="estabilidad">
-            <h1>ANÁLISIS DE ESTABILIDAD</h1>
+        <section id="ae" class="estabilidad">
+            <h1 id="e">ANÁLISIS DE ESTABILIDAD</h1>
             <section class="estatico">
-                <h3>ANÁLISIS DE ESTABILIDAD EN ESTADO ESTÁTICO</h3>
+                <h3 id="rv" >ANÁLISIS DE ESTABILIDAD EN ESTADO ESTÁTICO</h3>
                 <h5>(TEORÍA DE COULOMB)</h5>
                 <div class="volcamiento">
                     <h3>REVISIÓN DEL VOLCAMIENTO</h3>
@@ -211,13 +219,14 @@
                         <p>=<div class="result" id="factorseguridadvolteo"></div></p><p>> = 3<div class="result" id="fsvok"></div></p>
                     </figure>
                 </div>
-                <div class="deslizamiento">
+                <div id="rd" class="deslizamiento">
                     <h3>REVISIÓN DEL DESLIZAMIENTO</h3>
                     <br>
                     <h4>Actualización pendiente</h4>
+                    <br>
             </section>
         </section>
-        <h5>Ver 2.4</h5>
+        <h5 style="margin:5px;">Ver 2.5</h5>
         <script src="muros.js"></script>   
     </body>
 </html>
