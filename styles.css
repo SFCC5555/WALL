@@ -38,7 +38,7 @@ table {
 
 .tabla {
     margin-bottom: 30px;
-    font-size: 5rem;
+    font-size: 3.5rem;
 }
 
 .helptext {
@@ -64,13 +64,28 @@ h1 {
     text-align: center;
 }
 
+.buttonContainer {
+    position:relative;
+    background-color: #ffffe6dc;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
 button {
     cursor:help;
-    background-color: white;
-    width: 80px;
-    height: 40px;
+    background-color: #ffffe6dc;
+    width: 100px;
+    height: 50px;
     font-weight: bold;
+    border: 2px outset #ccccb6dc;
+    position: absolute;
+    top:-50%;
+    right: -15%;
 }
+
+
+
 button:hover {
     border-color: yellowgreen;
     transform:scale(1.25);

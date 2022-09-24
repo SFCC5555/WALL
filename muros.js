@@ -16,17 +16,6 @@ let btres=document.getElementById("Btres");
 let a=document.getElementById("a");
 let d=document.getElementById("D");
 
-let rh=document.getElementById("rH");
-let rhtres=document.getElementById("rHtres");
-let rb=document.getElementById("rB");
-let rbuno=document.getElementById("rBuno");
-let rbdos=document.getElementById("rBdos");
-let rbtres=document.getElementById("rBtres");
-let ra=document.getElementById("ra");
-let rd=document.getElementById("rD");
-
-
-
 let hp=document.getElementById("Hp");
 let huno=document.getElementById("Huno");
 let hdos=document.getElementById("Hdos");
@@ -73,17 +62,6 @@ let z=document.querySelectorAll(".cambio");
 
 function calculo() {
 
-    rh.innerHTML=h.value;
-    rhtres.innerHTML=htres.value;
-    rb.innerHTML=b.value;
-    rbuno.innerHTML=buno.value;
-    rbdos.innerHTML=bdos.value;
-    rbtres.innerHTML=btres.value;
-    ra.innerHTML=a.value;
-    rd.innerHTML=d.value;
-
-    
-    
     xhdos=h.value-htres.value;
     hdos.innerHTML=xhdos.toFixed(2);
 
