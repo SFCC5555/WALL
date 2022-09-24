@@ -3,12 +3,14 @@
     <head>
         <title>MUROS DE CONTENCIÓN</title>
         <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <link rel="stylesheet" type="text/css" href="desktop.css" media="screen and (min-width:600px)"/>
         <link rel="icon" href="/IMAGENES/areas.jpg" />
     </head>
     <body>
         <h1>MUROS DE CONTENCIÓN</h1>
-        <h3>PARÁMETROS DE SUELO</h3>
+        <h3 style="margin-bottom: 20px;">Diseño y Análisis de Estabilidad</h3>
         <section class="parametros">
+            <h3>PARÁMETROS DE SUELO</h3>
             <div class="tabla">
                 <table>
                     <thead>
@@ -37,85 +39,85 @@
                 </table>
             </div>
         </section>
-        <h3>DIMENCIONES DEL MURO</h3>
         <section class="dimenciones">
-                <div class="tabla">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th> DIMENCIONES </th>
-                                <th> MURO DE GRAVEDAD</th>
-                            
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="CP">H(m)</td>
-                                <td><input class="helptext" type="float" placeholder="Altura de muro" required="" id="H" name="H"></td>
-                                <td id="rH"class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">H3 (m)</td>
-                                <td><input class="helptext" type="float" placeholder="( 0.12H - 0.17H )" required="" id="Htres" name="H3"></td>
-                                <td id="rHtres" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">B (m)</td>
-                                <td><input class="helptext" type="float" placeholder="( 0.5H - 0.7H )" required="" id="B" name="B"></td>
-                                <td id="rB" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">B1 (m)</td>
-                                <td><input class="helptext" type="float" placeholder="( > 0.3 m )" required="" id="Buno" name="B1"></td>
-                                <td id="rBuno" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">B2 (m)</td>
-                                <td><input class="helptext" type="float" placeholder="( 0.1H - 0.17H )" required="" id="Bdos" name="B2"></td>
-                                <td id="rBdos" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">B3 (m)</td>
-                                <td><input class="helptext" type="float" placeholder="( > 0.02H2 )" required="" id="Btres" name="B3"></td>
-                                <td id="rBtres" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">a (Grados)</td>
-                                <td><input class="helptext" type="float" placeholder="Ángulo alfa" required="" id="a" name="a"></td>
-                                <td id="ra" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">D (m)</td>
-                                <td><input class="helptext" type="float" placeholder="(> 0.6 m )" required="" id="D" name="D"></td>
-                                <td id="rD" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">H' (m)</td>
-                                <td id="Hp" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">H1 (m)</td>
-                                <td id="Huno" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">H2 (m)</td>
-                                <td id="Hdos" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">B4 (m)</td>
-                                <td id="Bcuatro" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">B5 (m)</td>
-                                <td id="Bcinco" class="result"></td>
-                            </tr>
-                            <tr>
-                                <td class="CP">B6 (m)</td>
-                                <td id="Bseis" class="result"></td>
-                            </tr>
+            <h3>DIMENCIONES DEL MURO</h3>
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> DIMENCIONES </th>
+                            <th> MURO DE GRAVEDAD</th>
+                        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="CP">H(m)</td>
+                            <td><input class="helptext" type="float" placeholder="Altura de muro" required="" id="H" name="H"></td>
+                            <td id="rH"class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">H3 (m)</td>
+                            <td><input class="helptext" type="float" placeholder="( 0.12H - 0.17H )" required="" id="Htres" name="H3"></td>
+                            <td id="rHtres" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">B (m)</td>
+                            <td><input class="helptext" type="float" placeholder="( 0.5H - 0.7H )" required="" id="B" name="B"></td>
+                            <td id="rB" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">B1 (m)</td>
+                            <td><input class="helptext" type="float" placeholder="( > 0.3 m )" required="" id="Buno" name="B1"></td>
+                            <td id="rBuno" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">B2 (m)</td>
+                            <td><input class="helptext" type="float" placeholder="( 0.1H - 0.17H )" required="" id="Bdos" name="B2"></td>
+                            <td id="rBdos" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">B3 (m)</td>
+                            <td><input class="helptext" type="float" placeholder="( > 0.02H2 )" required="" id="Btres" name="B3"></td>
+                            <td id="rBtres" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">a (Grados)</td>
+                            <td><input class="helptext" type="float" placeholder="Ángulo alfa" required="" id="a" name="a"></td>
+                            <td id="ra" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">D (m)</td>
+                            <td><input class="helptext" type="float" placeholder="(> 0.6 m )" required="" id="D" name="D"></td>
+                            <td id="rD" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">H' (m)</td>
+                            <td id="Hp" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">H1 (m)</td>
+                            <td id="Huno" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">H2 (m)</td>
+                            <td id="Hdos" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">B4 (m)</td>
+                            <td id="Bcuatro" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">B5 (m)</td>
+                            <td id="Bcinco" class="result"></td>
+                        </tr>
+                        <tr>
+                            <td class="CP">B6 (m)</td>
+                            <td id="Bseis" class="result"></td>
+                        </tr>
 
-                    </table>
-                </div>
+                </table>
+            </div>
 
             <div>
                 <button onclick="calculo();"> Calcular </button>
