@@ -134,7 +134,7 @@ button:hover {
 
 .volcamiento figure p {
     align-self: center;
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: bolder;
     padding: 0px 10px;
 }
@@ -208,11 +208,6 @@ button:hover {
     flex-direction: column;
 }
 
-.tablamomentos {
-    display: flex;
-    justify-content: center;
-}
-
 #pehormigon {
     border-right: none;
 }
@@ -226,7 +221,13 @@ button:hover {
     border: none;
 }
 
-td.cambio{
+td.cambio {
     background-color: #fcfcdfdc;
     color: grey;
+}
+
+#pehormigon {
+    font-weight:bold;
+    background-color:#ffffe6dc;
+    font-size: 1.25rem;
 }

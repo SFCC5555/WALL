@@ -191,6 +191,7 @@ function cambio() {
 function ok() {
     if (xfsv>=3) {
         fsvok.innerHTML="OK"
+        fsvok.setAttribute("class","result");
     }
     else {
         fsvok.innerHTML="Cambiar dimenciones"
