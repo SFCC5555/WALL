@@ -57,7 +57,7 @@ table {
 
 h1 {
     text-align: center;
-    color:teal;
+
 }
 
 .buttonContainer {
@@ -262,7 +262,7 @@ nav {
 }
 
 a {
-    color: black;
+    color:teal;
     text-decoration: none;
 }
 
