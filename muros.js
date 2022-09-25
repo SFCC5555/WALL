@@ -62,6 +62,12 @@ let z=document.querySelectorAll(".cambio");
 
 let menu=document.querySelector("#menuContainer");
 
+let body=document.querySelector("body");
+
+function darkMode() {
+    body.classList.toggle("dark");
+}
+
 function calculo() {
 
     xhdos=h.value-htres.value;
