@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: magenta;
+    background-color: #ffffe6dc;
     display:flex;
     flex-direction: column;
     align-items: center;
