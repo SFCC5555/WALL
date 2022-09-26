@@ -120,28 +120,28 @@
             <section class="estatico">
                 <h3 id="rv" >ANÁLISIS DE ESTABILIDAD EN ESTADO ESTÁTICO</h3>
                 <h5>(TEORÍA DE COULOMB)</h5>
-                <div class="volcamiento">
+                <div class="contenedor">
                     <h3>REVISIÓN DEL VOLCAMIENTO</h3>
                     <br>
                     <h3>Coeficiente de presión activa de Coulomb (Ka):</h3>
                     <figure>
                         <img src="IMAGENES/Kax.png" alt="Ka"/>
-                        <p>=<div class="result" id="valorka"></div></p>
+                        <p>=<div class="contenedorResultado" id="valorka"></div></p>
                     </figure>
                     <h3>Fuerza activa de Coulomb(Pa) (KN/m):</h3>
                     <figure>
                         <img src="IMAGENES/Pax.png" alt="Pa"/>
-                        <p>=<div class="result" id="valorpa"></div></p>
+                        <p>=<div class="contenedorResultado" id="valorpa"></div></p>
                     </figure>
                     <h3>Componente Vertical de la Fuerza activa de Coulomb(Pv) (KN/m):</h3>
                     <figure>
                         <img src="IMAGENES/Pvx.png" alt="Pv"/>
-                        <p>=<div class="result" id="valorpv"></div></p>
+                        <p>=<div class="contenedorResultado" id="valorpv"></div></p>
                     </figure>
                     <h3>Componente Horizontal de la Fuerza activa de Coulomb(Ph) (KN/m):</h3>
                     <figure>
                         <img src="IMAGENES/Phx.png" alt="Ph"/>
-                        <p>=<div class="result" id="valorph"></div></p>
+                        <p>=<div class="contenedorResultado" id="valorph"></div></p>
                     </figure>
                     <h3>Sumatoria de Momentos resistentes ΣMR respecto al punto C:</h3>
                     <figure id="areas">
@@ -211,22 +211,37 @@
                     <h3>Sumatoria de Momentos que tienden a volcar la estructura en el punto C (ΣMo) (KN.m/m):</h3>
                     <figure>
                         <img src="IMAGENES/momentosox.png" alt="ΣMo"/>
-                        <p>=<div class="result" id="sumatoriamo"></div></p>
+                        <p>=<div class="contenedorResultado" id="sumatoriamo"></div></p>
                     </figure>
                     <h3>Factor de seguridad contra volteo respecto a la punta:</h3>
                     <figure>
                         <img src="IMAGENES/factorseguridadvolteox.png" alt="F.S(volteo)"/>
-                        <p>=<div class="result" id="factorseguridadvolteo"></div></p><p>> = 3<div class="result" id="fsvok"></div></p>
+                        <p>=<div class="contenedorResultado" id="factorseguridadvolteo"></div></p><p>> = 3<div class="contenedorResultado" id="fsvok"></div></p>
                     </figure>
                 </div>
-                <div id="rd" class="deslizamiento">
+                <div id="rd" class="contenedor">
                     <h3>REVISIÓN DEL DESLIZAMIENTO</h3>
                     <br>
+                    <h3>Coeficiente de presión pasiva de Coulomb (Kp):</h3>
+                    <figure>
+                        <img src="IMAGENES/kpx.png" alt="Kp"/>
+                        <p>=<div class="contenedorResultado" id="valorkp"></div></p>
+                    </figure>
+                    <h3>Fuerza pasiva de Coulomb(Pp) (KN/m):</h3>
+                    <figure>
+                        <img src="IMAGENES/Ppx.png" alt="Pp"/>
+                        <p>=<div class="contenedorResultado" id="valorpp"></div></p>
+                    </figure>
+                    <h3>Factor de seguridad contra deslizamiento:</h3>
+                    <figure>
+                        <img src="IMAGENES/factorseguridaddeslizamientox.png" alt="F.S(deslizamiento)"/>
+                        <p>=<div class="contenedorResultado" id="factorseguridaddeslizamiento"></div></p><p>> = 1.6<div class="contenedorResultado" id="fsdok"></div></p>
+                    </figure>
                     <h4>Actualización pendiente</h4>
                     <br>
             </section>
         </section>
-        <h5 style="margin:5px;">Ver 2.5</h5>
+        <h5 style="margin:5px;">Ver 2.6</h5>
         <script src="muros.js"></script>   
     </body>
 </html>

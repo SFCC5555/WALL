@@ -98,8 +98,13 @@ button:hover {
 
 .error {
     color:red;
-    font-weight: bold;
     font-size: 1rem;
+    width: 80px;
+    height: 40px;
+    border: 2px inset #ccccb6dc;
+    padding-top: 5px;
+    font-weight: bold;
+    background-color: #fcfcdfdc;
 }
 
 .estabilidad {
@@ -116,14 +121,14 @@ button:hover {
     padding-top: 20px;
 }
 
-.volcamiento {
+.contenedor {
     text-align: left;
     padding: 15px;
     border:2px inset #ccccb6dc;
     margin:15px;
 }
 
-.volcamiento figure {
+.contenedor figure {
     text-align: center;
     padding: 40px;
     display: flex;
@@ -131,76 +136,24 @@ button:hover {
     align-items: center;
 }
 
-.volcamiento figure p {
+.contenedor figure p {
     align-self: center;
     font-size: 3rem;
     font-weight: bolder;
     padding: 0px 10px;
 }
 
-#valorka {
+.contenedorResultado {
     width: 80px;
     height: 40px;
     border: 2px inset #ccccb6dc;
-    translate: 0% 0%;
-    padding-top: 15px;
-    background-color: #fcfcdfdc;
-}
-
-#valorpa {
-    width: 80px;
-    height: 40px;
-    border: 2px inset #ccccb6dc;
-    translate: 0% 10%;
-    padding-top: 15px;
-    background-color: #fcfcdfdc;
-}
-
-#valorpv {
-    width: 80px;
-    height: 40px;
-    border: 2px inset #ccccb6dc;
-    translate: 0% 10%;
-    padding-top: 15px;
-    background-color: #fcfcdfdc;
-}
-
-#valorph {
-    width: 80px;
-    height: 40px;
-    border: 2px inset #ccccb6dc;
-    translate: 0% 10%;
-    padding-top: 15px;
-    background-color: #fcfcdfdc;
-}
-
-#sumatoriamo {
-    width: 80px;
-    height: 40px;
-    border: 2px inset #ccccb6dc;
-    translate: 0% 10%;
-    padding-top: 15px;
-    background-color: #fcfcdfdc;
-}
-
-#factorseguridadvolteo {
-    width: 80px;
-    height: 40px;
-    border: 2px inset #ccccb6dc;
-    translate: 0% 10%;
-    padding-top: 15px;
-    background-color: #fcfcdfdc;
-}
-
-#fsvok {
-    width: 80px;
-    height: 40px;
-    border: 2px inset #ccccb6dc;
-    translate: 0% 10%;
     padding-top: 10px;
-    padding-bottom: 20px;
+    color:yellowgreen;
+    font-weight: bold;
     background-color: #fcfcdfdc;
-}
+    font-size: 1.25rem;
+}    
+
 
 #areas {
     display: flex;
@@ -209,11 +162,6 @@ button:hover {
 
 #pehormigon {
     border-right: none;
-}
-
-.deslizamiento {
-    text-align: left;
-    padding-left: 10px;
 }
 
 .empty {
@@ -262,7 +210,7 @@ nav {
 }
 
 a {
-    color:teal;
+    color:black;
     text-decoration: none;
 }
 

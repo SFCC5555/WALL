@@ -185,7 +185,7 @@ function momentos() {
 }
 
 function cambio() {
-    for ( i=0; i<=z.length; i++){
+    for ( i=0; i<z.length; i++){
         z[i].setAttribute("class","result");
     }
 }
