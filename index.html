@@ -11,9 +11,9 @@
             <div><a onclick="mostrarMenu();" href="">PARÁMETROS DE SUELO</a></div>
             <div><a onclick="mostrarMenu();" href="#dim">DIMENSIONES DEL MURO</a></div>
             <div><a onclick="mostrarMenu();" href="#ae">ANÁLISIS DE ESTABILIDAD</a></div>
-            <div><a onclick="mostrarMenu();" href="#e">- ANÁLISIS DE ESTABILIDAD EN ESTADO ESTÁTICO</a></div>
-            <div><a onclick="mostrarMenu();" href="#rv">- - REVISIÓN DEL VOLCAMIENTO</a></div>
-            <div><a onclick="mostrarMenu();" href="#rd">- - REVISIÓN DEL DESLIZAMIENTO</a></div>
+            <div><a onclick="mostrarMenu();" href="#rv">- REVISIÓN DEL VOLCAMIENTO</a></div>
+            <div><a onclick="mostrarMenu();" href="#rd">- REVISIÓN DEL DESLIZAMIENTO</a></div>
+            <div><a onclick="mostrarMenu();" href="#rf">- REVISIÓN DE LA CAPACIDAD DE CARGA</a></div>
         </section>
         <nav>
             <div onclick="mostrarMenu();">Menú</div>
@@ -115,8 +115,9 @@
             </div>
         </section>
         <img class="imagen" src="IMAGENES/Dimenciones_de_muro.jpg" width="375">
-        <section id="ae" class="estabilidad">
-            <h1 id="e">ANÁLISIS DE ESTABILIDAD</h1>
+        <div id="ae"></div>
+        <section  class="estabilidad">
+            <h1>ANÁLISIS DE ESTABILIDAD</h1>
             <section class="estatico">
                 <h3 id="rv" >ANÁLISIS DE ESTABILIDAD EN ESTADO ESTÁTICO</h3>
                 <h5>(TEORÍA DE COULOMB)</h5>
@@ -219,7 +220,8 @@
                         <p>=<div class="contenedorResultado" id="factorseguridadvolteo"></div></p><p>> = 3<div class="contenedorResultado" id="fsvok"></div></p>
                     </figure>
                 </div>
-                <div id="rd" class="contenedor">
+                <div id="rd"></div>
+                <div class="contenedor">
                     <h3>REVISIÓN DEL DESLIZAMIENTO</h3>
                     <br>
                     <h3>Coeficiente de presión pasiva de Coulomb (Kp):</h3>
@@ -237,11 +239,64 @@
                         <img src="IMAGENES/factorseguridaddeslizamientox.png" alt="F.S(deslizamiento)"/>
                         <p>=<div class="contenedorResultado" id="factorseguridaddeslizamiento"></div></p><p>> = 1.6<div class="contenedorResultado" id="fsdok"></div></p>
                     </figure>
-                    <h4>Actualización pendiente</h4>
+                </div>
+                <div id="rf"></div>
+                <div class="contenedor">
+                    <h3>REVISIÓN DE LA CAPACIDAD DE CARGA</h3>
                     <br>
+                    <h3>Excentricidad de la fuerza resultante entre las fuerzas verticales y horizontales (e):</h3>
+                    <figure>
+                        <img src="IMAGENES/ex.png" alt="e"/>
+                        <p>=<div class="contenedorResultado" id="valore"></div></p><p> < B/6<div class="contenedorResultado" id="eok"></div></p>
+                    </figure>
+                    <h3>Presión máxima, en la punta (qmax) (KN/m²):</h3>
+                    <figure>
+                        <img src="IMAGENES/qmax.png" alt="qmax"/>
+                        <p>=<div class="contenedorResultado" id="valorqmax"></div></p>
+                    </figure>
+                    <h3>Presión mínima, en el talón (qmin) (KN/m²):</h3>
+                    <figure>
+                        <img src="IMAGENES/qmin.png" alt="qmin"/>
+                        <p>=<div class="contenedorResultado" id="valorqmin"></div></p>
+                    </figure>
+                    <h3>Parámetros para el cálculo de la capacidad ultima de carga:</h3>
+                    <figure>
+                        <img src="IMAGENES/qx.png" alt="q"/>
+                        <p>=<div class="contenedorResultado" id="valorq"></div></p>
+                    </figure>
+                    <figure>
+                        <img src="IMAGENES/bp.png" alt="B'"/>
+                        <p>=<div class="contenedorResultado" id="valorbp"></div></p>
+                    </figure>
+                    <figure>
+                        <img src="IMAGENES/fcd.png" alt="Fcd'"/>
+                        <p>=<div class="contenedorResultado" id="valorFcd"></div></p>
+                    </figure>
+                    <figure>
+                        <img src="IMAGENES/fqd.png" alt="Fqd'"/>
+                        <p>=<div class="contenedorResultado" id="valorFqd"></div></p>
+                    </figure>
+                    <figure>
+                        <img src="IMAGENES/fdd.png" alt="Fγd'"/>
+                    </figure>
+                    <figure>
+                        <img src="IMAGENES/psi.png" alt="ψ"/>
+                        <p>=<div class="contenedorResultado" id="valorPsi"></div></p>
+                    </figure>
+                    <figure>
+                        <img src="IMAGENES/fci.png" alt="Fci"/>
+                        <p>=<div class="contenedorResultado" id="valorFci"></div></p>
+                    </figure>
+                    <figure>
+                        <img src="IMAGENES/fdi.png" alt="Fγi"/>
+                        <p>=<div class="contenedorResultado" id="valorFdi"></div></p>
+                    </figure>
+                </div>
             </section>
+            <h4>Actualización pendiente</h4>
+            <br>
         </section>
-        <h5 style="margin:5px;">Ver 2.7</h5>
+        <h5 style="margin:5px;">Ver 2.8</h5>
         <script src="muros.js"></script>   
     </body>
 </html>

@@ -74,7 +74,20 @@ let pp=document.getElementById("valorpp");
 let fsd=document.getElementById("factorseguridaddeslizamiento");
 let fsdok=document.getElementById("fsdok");
 
-/* Funcion para ambio de estilo de los resultados*/
+/* Parametros calculados  para revision de la capacidad de carga*/
+
+let e=document.getElementById("valore");
+let qmax=document.getElementById("valorqmax");
+let qmin=document.getElementById("valorqmin");
+let q=document.getElementById("valorq");
+let bp=document.getElementById("valorbp");
+let fcd=document.getElementById("valorFcd");
+let fqd=document.getElementById("valorFqd");
+let psi=document.getElementById("valorPsi");
+let fci=document.getElementById("valorFci");
+let fdi=document.getElementById("valorFdi");
+
+/* Funcion para cambio de estilo de los resultados*/
 
 let z=document.querySelectorAll(".cambio");
 
@@ -116,7 +129,8 @@ function calculo() {
     hp.innerHTML=xhp.toFixed(2);
 
     volteoCoulomb();
-    deslizamientoCoulomp();
+    deslizamientoCoulomb();
+    capacidadCargaCoulomb();
     cambio();
 }
 
@@ -232,9 +246,9 @@ function okVolcamiento() {
 }
 
 
-/* Funciones para la revision del Deslizamiento */
+/* Funciones para la revisión del Deslizamiento */
 
-function deslizamientoCoulomp() {
+function deslizamientoCoulomb() {
 
     fidos=parseFloat(afdos.value)*Math.PI/180;
     xkp=Math.pow(Math.tan((45*Math.PI/180) + (fidos/2)),2);
@@ -261,3 +275,57 @@ function deslizamientoCoulomp() {
 
 }
 
+/* Funciones para la revisión de la Capacidad de carga*/
+
+function capacidadCargaCoulomb() {
+
+    /*Calculo de la excentricidad (e)*/
+
+    xe=((parseFloat(b.value))/(2))-((xsm-xsmo)/(xsv));
+    e.innerText=xe.toFixed(2)+" m";
+
+    if (xe<=(parseFloat(b.value)/6)) 
+    {
+        eok.innerText="OK";
+        eok.setAttribute("class","contenedorResultado");
+    }
+    else {
+        eok.innerText="Cambiar dimenciones";
+        eok.setAttribute("class","error");
+    }
+
+    /*Presion maxima (qmax)*/
+
+    xqmax=((xsv)/(parseFloat(b.value)))*(1+((6*(xe))/(parseFloat(b.value))));
+    qmax.innerText=xqmax.toFixed(2)+" KN/m²";
+
+    /*Presion minima (qmin)*/
+
+    xqmin=((xsv)/(parseFloat(b.value)))*(1-((6*(xe))/(parseFloat(b.value))));
+    qmin.innerText=xqmin.toFixed(2)+" KN/m²";
+
+    /*Calculo de los parametros necesarios para capacidad ultima de carga*/
+
+    xq=(parseFloat(pedos.value))*(parseFloat(d.value))
+    q.innerText=xq.toFixed(2)+" KN/m²";
+
+    xbp=(parseFloat(b.value))-(2*xe);
+    bp.innerText=xbp.toFixed(2)+" m";
+
+    xfcd=1+0.4*((parseFloat(d.value))/(xbp));
+    fcd.innerText=xfcd.toFixed(2);
+
+    fidos=parseFloat(afdos.value)*Math.PI/180;
+    xfqd=1+(2*Math.tan(fidos))*(Math.pow((1-Math.sin(fidos)),2))*((parseFloat(d.value))/(xbp));
+    fqd.innerText=xfqd.toFixed(2);
+
+    xpsi=Math.atan(((xpa)*(Math.cos(alfa)))/(xsv))*((180)/(Math.PI));
+    psi.innerText=xpsi.toFixed(2)+"°";
+
+    xfci=Math.pow((1-((xpsi)/(90))),2);
+    fci.innerText=xfci.toFixed(3);
+
+    xfdi=Math.pow((1-((xpsi)/(parseFloat(afdos.value)))),2);
+    fdi.innerText=xfdi.toFixed(3);
+
+}

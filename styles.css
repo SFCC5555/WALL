@@ -50,8 +50,7 @@ table {
 
 .imagen {
     cursor:crosshair;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin-top: 30px;
     border: 3px inset #ccccb6dc;
 }
 
@@ -126,6 +125,7 @@ button:hover {
     padding: 15px;
     border:2px inset #ccccb6dc;
     margin:15px;
+    margin-bottom: 0px;
 }
 
 .contenedor figure {
@@ -256,3 +256,6 @@ nav div:hover {
 
 }
 
+#ae, #rd, #rf {
+    height: 40px;
+}
