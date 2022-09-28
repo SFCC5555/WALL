@@ -372,3 +372,7 @@ nav div:hover {
 .noCumple {
     color: red;
 }
+
+#tablaMomentos {
+    margin-bottom: 50px;
+}
