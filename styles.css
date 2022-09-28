@@ -60,7 +60,6 @@ h1 {
 }
 
 .buttonContainer {
-    position:relative;
     background-color: #ffffe6dc;
     border: none;
     margin: 0;
@@ -69,14 +68,13 @@ h1 {
 
 button {
     cursor:help;
-    background-color: #ffffe6dc;
+    background-color: #eeeedddc;
     width: 100px;
     height: 50px;
     font-weight: bold;
     border: 2px outset #ccccb6dc;
-    position: absolute;
-    top:-50%;
-    right: -25%;
+    translate: 20%;
+
 }
 
 
@@ -258,4 +256,119 @@ nav div:hover {
 
 #ae, #rd, #rf {
     height: 40px;
+}
+
+.figuraDimensiones {
+    text-align: center;
+}
+
+#contenedorResumen {
+    display: flex;
+    justify-content: center;
+    padding: 75px 0px;
+}
+
+.contenedorTablaResumen {
+    font-size: 1.5rem;
+    width: 75%;
+    border: 1px solid #ccccb6dc;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    padding: 2px;
+}
+
+#contenedorEstabilidad {
+    font-weight: bold;
+    font-size: 2rem;
+    grid-column: 1/4;
+    grid-row: 1;
+    border: 2px inset #ccccb6dc;
+    text-align: center;
+    padding: 15px;
+    background-color: #eeeedddc;
+}
+
+#contenedorVolcamiento {
+    font-weight: bold;
+    grid-column: 1/2;
+    grid-row: 2;
+    border: 2px inset #ccccb6dc;
+    text-align: center;
+    padding: 15px;
+    background-color: #eeeedddc;
+}
+
+#contenedorDeslizamiento {
+    font-weight: bold;
+    grid-column: 2/3;
+    grid-row: 2;
+    border: 2px inset #ccccb6dc;
+    text-align: center;
+    padding: 15px;
+    background-color: #eeeedddc;
+}
+
+#contenedorCapacidadCarga {
+    font-weight: bold;
+    grid-column: 3/4;
+    grid-row: 2;
+    border: 2px inset #ccccb6dc;
+    text-align: center;
+    padding: 15px;
+    background-color: #eeeedddc;
+}
+
+#contenedorVolcamientoResultado {
+    font-weight: bold;
+    grid-column: 1/2;
+    grid-row: 3;
+    border: 2px inset #ccccb6dc;
+    text-align: center;
+    padding: 15px;
+    background-color: #fcfcdfdc;
+}
+
+#contenedorDeslizamientoResultado {
+    font-weight: bold;
+    grid-column: 2/3;
+    grid-row: 3;
+    border: 2px inset #ccccb6dc;
+    text-align: center;
+    padding: 15px;
+    background-color: #fcfcdfdc;
+
+}
+
+#contenedorCapacidadCargaResultado {
+    font-weight: bold;
+    grid-column: 3/4;
+    grid-row: 3;
+    border: 2px inset #ccccb6dc;
+    text-align: center;
+    padding: 15px;
+    background-color: #fcfcdfdc;
+}
+
+#contenedorResultado {
+    font-weight: bold;
+    grid-column: 1/4;
+    grid-row: 4;
+    border: 2px inset #ccccb6dc;
+    text-align: center;
+    padding: 15px;
+    background-color: #fcfcdfdc;
+}
+
+
+.neutro {
+    color: grey;
+}
+
+.siCumple {
+    color: yellowgreen;
+}
+
+.noCumple {
+    color: red;
 }

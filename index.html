@@ -14,6 +14,7 @@
             <div><a onclick="mostrarMenu();" href="#rv">- REVISIÓN DEL VOLCAMIENTO</a></div>
             <div><a onclick="mostrarMenu();" href="#rd">- REVISIÓN DEL DESLIZAMIENTO</a></div>
             <div><a onclick="mostrarMenu();" href="#rf">- REVISIÓN DE LA CAPACIDAD DE CARGA</a></div>
+            <div><a onclick="mostrarMenu();" href="#contenedorResultado">RESUMEN (TABLA)</a></div>
         </section>
         <nav>
             <div onclick="mostrarMenu();">Menú</div>
@@ -102,19 +103,28 @@
                             <td id="Bseis" class="result"></td>
                         </tr>
                         <tr>
-                            <td class="CP">a (Grados)</td>
+                            <td class="CP">α (Grados)</td>
                             <td><input class="helptext" type="float" placeholder="Ángulo alfa" required="" id="a" name="a"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="CP">θ (Grados)</td>
+                            <td><input class="helptext" type="float" placeholder="(0°-15°)" required="" id="valorTeta" name="valorTeta"></td>
+                            <td class="buttonContainer"><button onclick="calculo();"> Calcular </button></td>
 
                         </tr>
                         <tr>
                             <td class="CP">D (m)</td>
                             <td><input class="helptext" type="float" placeholder="(> 0.6 m )" required="" id="D" name="D"></td>
-                            <td class="buttonContainer"><button onclick="calculo();"> Calcular </button></td>
+
                         </tr>
                 </table>
             </div>
         </section>
-        <img class="imagen" src="IMAGENES/Dimenciones_de_muro.jpg" width="375">
+        <figure class="figuraDimensiones">
+            <img class="imagen" src="IMAGENES/Dimenciones_de_muro.jpg" width="375">
+            <figcaption>Esquema de dimensiones del muro</figcaption>
+        </figure>
         <div id="ae"></div>
         <section  class="estabilidad">
             <h1>ANÁLISIS DE ESTABILIDAD</h1>
@@ -259,7 +269,7 @@
                         <img src="IMAGENES/qmin.png" alt="qmin"/>
                         <p>=<div class="contenedorResultado" id="valorqmin"></div></p>
                     </figure>
-                    <h3>Parámetros para el cálculo de la capacidad ultima de carga:</h3>
+                    <h3>Parámetros para el cálculo de la capacidad última de carga:</h3>
                     <figure>
                         <img src="IMAGENES/qx.png" alt="q"/>
                         <p>=<div class="contenedorResultado" id="valorq"></div></p>
@@ -291,12 +301,47 @@
                         <img src="IMAGENES/fdi.png" alt="Fγi"/>
                         <p>=<div class="contenedorResultado" id="valorFdi"></div></p>
                     </figure>
+                    <figure>
+                        <img src="IMAGENES/nq.png" alt="Nq"/>
+                        <p>=<div class="contenedorResultado" id="valorNq"></div></p>
+                    </figure>
+                    <figure>
+                        <img src="IMAGENES/nc.png" alt="Nc"/>
+                        <p>=<div class="contenedorResultado" id="valorNc"></div></p>
+                    </figure>
+                    <figure>
+                        <img src="IMAGENES/nd.png" alt="Nγ"/>
+                        <p>=<div class="contenedorResultado" id="valorNd"></div></p>
+                    </figure>
+                    <h3>Capacidad última de carga (qu) (KN/m²):</h3>
+                    <figure>
+                        <img src="IMAGENES/qu.png" alt="qu"/>
+                        <p>=<div class="contenedorResultado" id="valorQu"></div></p>
+                    </figure>
+                    <h3>Factor de seguridad contra la capacidad de carga:</h3>
+                    <figure>
+                        <img src="IMAGENES/factorseguridadCapacidadCarga.png" alt="F.S(capacidad de carga)"/>
+                        <p>=<div class="contenedorResultado" id="factorseguridadCapacidadCarga"></div></p><p>> = 3<div class="contenedorResultado" id="fsccok"></div></p>
+                    </figure>
                 </div>
             </section>
-            <h4>Actualización pendiente</h4>
-            <br>
+            <section id="contenedorResumen" class="contenedor">
+                <div class="contenedorTablaResumen">
+                    <div id="contenedorEstabilidad">ESTABILIDAD</div>
+                    <div id="contenedorVolcamiento">VOLCAMIENTO</div>
+                    <div id="contenedorDeslizamiento">DESLIZAMIENTO</div>
+                    <div id="contenedorCapacidadCarga">CAPACIDAD DE CARGA</div>
+                    <div id="contenedorVolcamientoResultado"></div>
+                    <div id="contenedorDeslizamientoResultado"></div>
+                    <div id="contenedorCapacidadCargaResultado"></div>
+                    <div class="neutro" id="contenedorResultado">Ingresar Dimensiones y Parámetros</div>
+                </div>
+
+            </section>
         </section>
-        <h5 style="margin:5px;">Ver 2.8</h5>
+        <br>
+        <h4>Ver 3.0</h4>
+        <br>
         <script src="muros.js"></script>   
     </body>
 </html>

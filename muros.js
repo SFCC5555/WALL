@@ -18,6 +18,7 @@ let buno=document.getElementById("Buno");
 let bdos=document.getElementById("Bdos");
 let btres=document.getElementById("Btres");
 let a=document.getElementById("a");
+let t=document.getElementById("valorTeta");
 let d=document.getElementById("D");
 
 /* Dimensiones calculadas del Muro */
@@ -86,6 +87,19 @@ let fqd=document.getElementById("valorFqd");
 let psi=document.getElementById("valorPsi");
 let fci=document.getElementById("valorFci");
 let fdi=document.getElementById("valorFdi");
+let nq=document.getElementById("valorNq");
+let nc=document.getElementById("valorNc");
+let nd=document.getElementById("valorNd");
+let qu=document.getElementById("valorQu");
+let fscc=document.getElementById("factorseguridadCapacidadCarga");
+let fsccok=document.getElementById("fsccok")
+
+/* Resultados para Tabla Resumen */
+
+let vr=document.getElementById("contenedorVolcamientoResultado");
+let dr=document.getElementById("contenedorDeslizamientoResultado");
+let cr=document.getElementById("contenedorCapacidadCargaResultado");
+let r=document.getElementById("contenedorResultado");
 
 /* Funcion para cambio de estilo de los resultados*/
 
@@ -132,11 +146,12 @@ function calculo() {
     deslizamientoCoulomb();
     capacidadCargaCoulomb();
     cambio();
+    resultado();
 }
 
 function volteoCoulomb() {
     alfa=parseFloat(a.value)*Math.PI/180;
-    teta=15*Math.PI/180;
+    teta=parseFloat(t.value)*Math.PI/180;
     fi=parseFloat(afuno.value)*Math.PI/180;
     delta=(2/3)*fi;
     
@@ -238,10 +253,18 @@ function okVolcamiento() {
     if (xfsv>=3) {
         fsvok.innerText="OK";
         fsvok.setAttribute("class","contenedorResultado");
+
+        vr.innerText="OK";
+        vr.classList.add("siCumple");
+        vr.classList.remove("noCumple");
     }
     else {
         fsvok.innerText="Cambiar dimenciones";
         fsvok.setAttribute("class","error");
+
+        vr.innerText="NO CUMPLE";
+        vr.classList.remove("siCumple");
+        vr.classList.add("noCumple");
     }
 }
 
@@ -267,11 +290,21 @@ function deslizamientoCoulomb() {
     if (xfsd>=1.6) {
         fsdok.innerText="OK";
         fsdok.setAttribute("class","contenedorResultado");
+
+        dr.innerText="OK";
+        dr.classList.remove("noCumple");
+        dr.classList.add("siCumple");
     }
     else {
         fsdok.innerText="Cambiar dimenciones";
         fsdok.setAttribute("class","error");
+
+        dr.innerText="NO CUMPLE";
+        dr.classList.remove("siCumple");
+        dr.classList.add("noCumple");
     }
+
+
 
 }
 
@@ -328,4 +361,53 @@ function capacidadCargaCoulomb() {
     xfdi=Math.pow((1-((xpsi)/(parseFloat(afdos.value)))),2);
     fdi.innerText=xfdi.toFixed(3);
 
+    xnq=(Math.pow(Math.tan((45+(parseFloat(afdos.value)/2))*Math.PI/180),2))*(Math.pow((Math.E),((Math.PI)*(Math.tan(fidos)))));
+    nq.innerText=xnq.toFixed(2);
+
+    xnc=(xnq-1)*(1/(Math.tan(fidos)));
+    nc.innerText=xnc.toFixed(2);
+
+    xnd=2*(xnq+1)*((Math.tan(fidos)));
+    nd.innerText=xnd.toFixed(2);
+
+    xqu=((parseFloat(cdos.value))*(xnc)*(xfcd)*(xfci))+((xq)*(xnq)*(xfqd)*(xfci))+((1/2)*(parseFloat(pedos.value))*(xbp)*(xnd)*(1)*(xfdi));
+    qu.innerText=xqu.toFixed(2);
+
+    xfscc=(xqu)/(xqmax);
+    fscc.innerText=xfscc.toFixed(2);
+
+    if (xfscc>=3) {
+        fsccok.innerText="OK";
+        fsccok.setAttribute("class","contenedorResultado");
+
+        cr.innerText="OK";
+        cr.classList.remove("noCumple");
+        cr.classList.add("siCumple");
+    }
+    else {
+        fsccok.innerText="Cambiar dimenciones";
+        fsccok.setAttribute("class","error");
+
+        cr.innerText="NO CUMPLE";
+        cr.classList.remove("siCumple");
+        cr.classList.add("noCumple");
+    }
+
+}
+
+function resultado() {
+    if (xfsv>=3 && xfsd>=1.6 && xfscc>=3) {
+        
+        r.innerText="Las Dimensiones del Muro satisfacen las condiciones de Estabilidad"
+        r.classList.remove("neutro");
+        r.classList.remove("noCumple");
+        r.classList.add("siCumple");
+    }
+
+    else {
+        r.innerText="Cambiar dimensiones"
+        r.classList.remove("neutro");
+        r.classList.remove("siCumple");
+        r.classList.add("noCumple");
+    }
 }
