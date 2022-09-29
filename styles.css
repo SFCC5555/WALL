@@ -58,14 +58,12 @@ table {
 }
 
 .imagen {
-    cursor:crosshair;
     margin-top: 30px;
     border: 3px inset var(--colorBordes);
 }
 
 h1 {
     text-align: center;
-
 }
 
 .buttonContainer {
@@ -78,11 +76,12 @@ h1 {
 button {
     cursor:help;
     background-color: var(--colorObjetos);
-    width: 100px;
-    height: 50px;
+    width: 125px;
+    height: 75px;
     font-weight: bold;
+    font-size: 1.75rem;
     border: 2px outset var(--colorBordes);
-    translate: 20%;
+    translate: 15%;
 
 }
 
