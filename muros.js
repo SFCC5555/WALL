@@ -1,13 +1,13 @@
 /*Parametros de Suelo 1 y 2*/
 
-let peuno=document.getElementById("pesoespecificouno");
-let pedos=document.getElementById("pesoespecificodos");
+let peuno=document.getElementById("pesoEspecificoUno");
+let pedos=document.getElementById("pesoEspecificoDos");
 
-let afuno=document.getElementById("angulodefriccionuno");
-let afdos=document.getElementById("angulodefricciondos");
+let afuno=document.getElementById("anguloDeFriccionUno");
+let afdos=document.getElementById("anguloDeFriccionDos");
 
-let cuno=document.getElementById("cohesionuno");
-let cdos=document.getElementById("cohesiondos");
+let cuno=document.getElementById("cohesionUno");
+let cdos=document.getElementById("cohesionDos");
 
 /* Dimensiones propuestas del Muro */
 
@@ -38,42 +38,42 @@ let pa=document.getElementById("valorpa");
 let pv=document.getElementById("valorpv");
 let ph=document.getElementById("valorph");
 
-let auno=document.getElementById("areauno");
-let ados=document.getElementById("areados");
-let atres=document.getElementById("areatres");
-let acuatro=document.getElementById("areacuatro");
+let auno=document.getElementById("areaUno");
+let ados=document.getElementById("areaDos");
+let atres=document.getElementById("areaTres");
+let acuatro=document.getElementById("areaCuatro");
 
-let puno=document.getElementById("pesouno");
-let pdos=document.getElementById("pesodos");
-let ptres=document.getElementById("pesotres");
-let pcuatro=document.getElementById("pesocuatro");
-let pver=document.getElementById("pesov");
+let puno=document.getElementById("pesoUno");
+let pdos=document.getElementById("pesoDos");
+let ptres=document.getElementById("pesoTres");
+let pcuatro=document.getElementById("pesoCuatro");
+let pver=document.getElementById("pesoVertical");
 
-let sv=document.getElementById("sumatoriav");
-let sm=document.getElementById("sumatoriam");
+let sv=document.getElementById("sumatoriaVertical");
+let sm=document.getElementById("sumatoriaMomentosResistentes");
 
-let bxuno=document.getElementById("brazouno");
-let bxdos=document.getElementById("brazodos");
-let bxtres=document.getElementById("brazotres");
-let bxcuatro=document.getElementById("brazocuatro");
-let bxv=document.getElementById("brazov");
+let bxuno=document.getElementById("brazoUno");
+let bxdos=document.getElementById("brazoDos");
+let bxtres=document.getElementById("brazoTres");
+let bxcuatro=document.getElementById("brazoCuatro");
+let bxv=document.getElementById("brazoVertical");
 
-let muno=document.getElementById("momentouno");
-let mdos=document.getElementById("momentodos");
-let mtres=document.getElementById("momentotres");
-let mcuatro=document.getElementById("momentocuatro");
-let mv=document.getElementById("momentov");
+let muno=document.getElementById("momentoUno");
+let mdos=document.getElementById("momentoDos");
+let mtres=document.getElementById("momentoTres");
+let mcuatro=document.getElementById("momentoCuatro");
+let mv=document.getElementById("momentoVertical");
 
-let smo=document.getElementById("sumatoriamo");
-let fsv=document.getElementById("factorseguridadvolteo");
-let fsvok=document.getElementById("fsvok");
+let smo=document.getElementById("sumatoriaMomentosOpuestos");
+let fsv=document.getElementById("factorSeguridadVolteo");
+let fsvok=document.getElementById("fsvOk");
 
 /* Parametros calculados  para revision del deslizamiento*/
 
 let kp=document.getElementById("valorkp");
 let pp=document.getElementById("valorpp");
-let fsd=document.getElementById("factorseguridaddeslizamiento");
-let fsdok=document.getElementById("fsdok");
+let fsd=document.getElementById("factorSeguridadDeslizamiento");
+let fsdok=document.getElementById("fsdOk");
 
 /* Parametros calculados  para revision de la capacidad de carga*/
 
@@ -91,8 +91,8 @@ let nq=document.getElementById("valorNq");
 let nc=document.getElementById("valorNc");
 let nd=document.getElementById("valorNd");
 let qu=document.getElementById("valorQu");
-let fscc=document.getElementById("factorseguridadCapacidadCarga");
-let fsccok=document.getElementById("fsccok")
+let fscc=document.getElementById("factorSeguridadCapacidadCarga");
+let fsccok=document.getElementById("fsccOk")
 
 /* Resultados para Tabla Resumen */
 
@@ -101,7 +101,7 @@ let dr=document.getElementById("contenedorDeslizamientoResultado");
 let cr=document.getElementById("contenedorCapacidadCargaResultado");
 let r=document.getElementById("contenedorResultado");
 
-/* Funcion para cambio de estilo de los resultados*/
+/* Función para cambio de estilo de los resultados*/
 
 let z=document.querySelectorAll(".cambio");
 
@@ -111,7 +111,7 @@ function cambio() {
     }
 }
 
-/* Funcion para mostrar menu */
+/* Función para mostrar menú */
 
 let menu=document.querySelector("#menuContainer");
 
@@ -120,7 +120,7 @@ function mostrarMenu() {
 }
 
 
-/* Funciones para la revision del Volcamiento */
+/* Funciones para la revisión del Volcamiento */
 
 function calculo() {
 
@@ -394,6 +394,8 @@ function capacidadCargaCoulomb() {
     }
 
 }
+
+/* Función para la tabla/resumen de los resultados */
 
 function resultado() {
     if (xfsv>=3 && xfsd>=1.6 && xfscc>=3) {

@@ -8,31 +8,41 @@ html {
     font-size: 62.5%;
 }
 
+:root {
+    --colorFondo:#ffffe6dc;
+    --colorBordes: #ccccb6dc;
+    --colorObjetos:#eeeedddc;
+    --colorInterior:#fcfcdfdc;
+    --colorTextoSecundario:grey;
+    --colorNoCumple:red;
+    --colorResultado:yellowgreen;
+}
+
 body {
-    background-color: #ffffe6dc;
+    background-color: var(--colorFondo);
     display:flex;
     flex-direction: column;
     align-items: center;
 }
 
-.CP {
+.contenidoPrincipalTabla {
     font-weight:bold;
 }
 
 td,th {
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     border-collapse:collapse;
     text-align: center;
     padding: 10px;
     padding-right: 15px;
     padding-left: 15px;
-    background-color: #eeeedddc;
+    background-color: var(--colorObjetos);
 }
 
 table {
-    border: 1px solid #ccccb6dc;
+    border: 1px solid var(--colorBordes);
     text-align: center;
-    background-color: #ffffe6dc;
+    background-color: var(--colorFondo);
 }
 
 .tabla {
@@ -41,17 +51,17 @@ table {
 
 .helptext {
     text-align: center;
-    background-color: #fcfcdfdc;
-    border:1px solid #ccccb6dc;;
+    background-color: var(--colorInterior);
+    border:1px solid var(--colorBordes);;
     font-size: 1.25rem;
     padding: 10px;
-    color: grey;
+    color: var(--colorTextoSecundario);
 }
 
 .imagen {
     cursor:crosshair;
     margin-top: 30px;
-    border: 3px inset #ccccb6dc;
+    border: 3px inset var(--colorBordes);
 }
 
 h1 {
@@ -60,7 +70,7 @@ h1 {
 }
 
 .buttonContainer {
-    background-color: #ffffe6dc;
+    background-color: var(--colorFondo);
     border: none;
     margin: 0;
     padding: 0;
@@ -68,11 +78,11 @@ h1 {
 
 button {
     cursor:help;
-    background-color: #eeeedddc;
+    background-color: var(--colorObjetos);
     width: 100px;
     height: 50px;
     font-weight: bold;
-    border: 2px outset #ccccb6dc;
+    border: 2px outset var(--colorBordes);
     translate: 20%;
 
 }
@@ -80,33 +90,33 @@ button {
 
 
 button:hover {
-    border-color: yellowgreen;
+    border-color: var(--colorResultado);
     transform:scale(1.1);
 }
 .helptext:hover {
-    border-color: yellowgreen;
+    border-color: var(--colorResultado);
 }
 
 .result {
-    color:yellowgreen;
+    color:var(--colorResultado);
     font-weight: bold;
-    background-color: #fcfcdfdc;
+    background-color: var(--colorInterior);
 }
 
 .error {
-    color:red;
+    color:var(--colorNoCumple);
     font-size: 1rem;
     width: 80px;
     height: 40px;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     padding-top: 5px;
     font-weight: bold;
-    background-color: #fcfcdfdc;
+    background-color: var(--colorInterior);
 }
 
 .estabilidad {
     padding-top: 20px;
-    border:2px inset #ccccb6dc;
+    border:2px inset var(--colorBordes);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -114,14 +124,14 @@ button:hover {
 
 .estatico {
     margin-top: 20px;
-    border-top: 2px inset #ccccb6dc;
+    border-top: 2px inset var(--colorBordes);
     padding-top: 20px;
 }
 
 .contenedor {
     text-align: left;
     padding: 15px;
-    border:2px inset #ccccb6dc;
+    border:2px inset var(--colorBordes);
     margin:15px;
     margin-bottom: 0px;
 }
@@ -144,11 +154,11 @@ button:hover {
 .contenedorResultado {
     width: 80px;
     height: 40px;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     padding-top: 10px;
-    color:yellowgreen;
+    color:var(--colorResultado);
     font-weight: bold;
-    background-color: #fcfcdfdc;
+    background-color: var(--colorInterior);
     font-size: 1.25rem;
 }    
 
@@ -158,7 +168,7 @@ button:hover {
     flex-direction: column;
 }
 
-#pehormigon {
+#pesoEspecificoHormigon {
     border-right: none;
 }
 
@@ -167,13 +177,13 @@ button:hover {
 }
 
 td.cambio {
-    background-color: #fcfcdfdc;
-    color: grey;
+    background-color: var(--colorInterior);
+    color: var(--colorTextoSecundario);
 }
 
 #pehormigon {
     font-weight:bold;
-    background-color:#ffffe6dc;
+    background-color:var(--colorFondo);
     font-size: 1.25rem;
 }
 
@@ -182,8 +192,8 @@ nav {
     height: 50px;
     display:flex;
     justify-content: space-between;
-    border: 2px outset #ccccb6dc;
-    background-color: #eeeedddc;
+    border: 2px outset var(--colorBordes);
+    background-color: var(--colorObjetos);
     font-size: 2rem;
     padding: 5px;
     align-items: center;
@@ -218,8 +228,8 @@ nav div {
 }
 
 nav div:hover {
-    border: 1px inset #ccccb6dc;
-    background-color: #fcfcdfdc;
+    border: 1px inset var(--colorBordes);
+    background-color: var(--colorInterior);
 }
 
 .inactive {
@@ -228,8 +238,8 @@ nav div:hover {
 
 .menu {
     width: 20%;
-    border: 1px inset #ccccb6dc;
-    background-color: #eeeedddc;
+    border: 1px inset var(--colorBordes);
+    background-color: var(--colorObjetos);
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -245,16 +255,16 @@ nav div:hover {
     margin: 5px 0px;
     text-align: center;
     padding: 5px 0px;
-    border: 1px solid #eeeedddc;
+    border: 1px solid var(--colorObjetos);
 }
 
 .menu div:hover {
-    border: 1px inset #ccccb6dc;
-    background-color: #fcfcdfdc;
+    border: 1px inset var(--colorBordes);
+    background-color: var(--colorInterior);
 
 }
 
-#ae, #rd, #rf {
+#seccionEstabilidad, #seccionDeslizamiento, #seccionCapacidadCarga {
     height: 40px;
 }
 
@@ -271,7 +281,7 @@ nav div:hover {
 .contenedorTablaResumen {
     font-size: 1.5rem;
     width: 75%;
-    border: 1px solid #ccccb6dc;
+    border: 1px solid var(--colorBordes);
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(4,1fr);
@@ -283,60 +293,60 @@ nav div:hover {
     font-size: 2rem;
     grid-column: 1/4;
     grid-row: 1;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     text-align: center;
     padding: 15px;
-    background-color: #eeeedddc;
+    background-color: var(--colorObjetos);
 }
 
 #contenedorVolcamiento {
     font-weight: bold;
     grid-column: 1/2;
     grid-row: 2;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     text-align: center;
     padding: 15px;
-    background-color: #eeeedddc;
+    background-color: var(--colorObjetos);
 }
 
 #contenedorDeslizamiento {
     font-weight: bold;
     grid-column: 2/3;
     grid-row: 2;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     text-align: center;
     padding: 15px;
-    background-color: #eeeedddc;
+    background-color: var(--colorObjetos);
 }
 
 #contenedorCapacidadCarga {
     font-weight: bold;
     grid-column: 3/4;
     grid-row: 2;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     text-align: center;
     padding: 15px;
-    background-color: #eeeedddc;
+    background-color: var(--colorObjetos);
 }
 
 #contenedorVolcamientoResultado {
     font-weight: bold;
     grid-column: 1/2;
     grid-row: 3;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     text-align: center;
     padding: 15px;
-    background-color: #fcfcdfdc;
+    background-color: var(--colorInterior);
 }
 
 #contenedorDeslizamientoResultado {
     font-weight: bold;
     grid-column: 2/3;
     grid-row: 3;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     text-align: center;
     padding: 15px;
-    background-color: #fcfcdfdc;
+    background-color: var(--colorInterior);
 
 }
 
@@ -344,33 +354,33 @@ nav div:hover {
     font-weight: bold;
     grid-column: 3/4;
     grid-row: 3;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     text-align: center;
     padding: 15px;
-    background-color: #fcfcdfdc;
+    background-color: var(--colorInterior);
 }
 
 #contenedorResultado {
     font-weight: bold;
     grid-column: 1/4;
     grid-row: 4;
-    border: 2px inset #ccccb6dc;
+    border: 2px inset var(--colorBordes);
     text-align: center;
     padding: 15px;
-    background-color: #fcfcdfdc;
+    background-color: var(--colorInterior);
 }
 
 
 .neutro {
-    color: grey;
+    color: var(--colorTextoSecundario);
 }
 
 .siCumple {
-    color: yellowgreen;
+    color: var(--colorResultado);
 }
 
 .noCumple {
-    color: red;
+    color: var(--colorNoCumple);
 }
 
 #tablaMomentos {
