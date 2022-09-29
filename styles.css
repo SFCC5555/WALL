@@ -45,7 +45,7 @@ table {
 }
 
 .tablaTipoUno table{
-    width: 75%;
+    font-size: 1.8rem;
 }
 
 .helptext {
@@ -189,7 +189,7 @@ nav {
     justify-content: space-between;
     border: 2px outset var(--colorBordes);
     background-color: var(--colorObjetos);
-    font-size: 2rem;
+    font-size: 2.25rem;
     padding: 5px;
     align-items: center;
     margin-bottom: 20px;
@@ -366,6 +366,7 @@ nav div:hover {
 }
 
 .tablaTipoDos {
+    font-size: 1.5rem;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -377,7 +378,7 @@ nav div:hover {
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.25rem;
-    translate: -65%;
+    translate: -100%;
 }
 
 .neutro {
