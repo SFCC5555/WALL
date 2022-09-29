@@ -370,6 +370,9 @@ nav div:hover {
     background-color: var(--colorInterior);
 }
 
+#tablaMomentos {
+    margin-bottom: 50px;
+}
 
 .neutro {
     color: var(--colorTextoSecundario);
@@ -383,6 +386,3 @@ nav div:hover {
     color: var(--colorNoCumple);
 }
 
-#tablaMomentos {
-    margin-bottom: 50px;
-}
