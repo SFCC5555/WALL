@@ -105,6 +105,8 @@ let r=document.getElementById("contenedorResultado");
 
 let z=document.querySelectorAll(".cambio");
 
+console.log(h.value)
+
 function cambio() {
     for ( i=0; i<z.length; i++){
         z[i].setAttribute("class","result");
